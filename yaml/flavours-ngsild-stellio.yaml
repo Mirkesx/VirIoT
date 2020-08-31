@@ -14,9 +14,10 @@ spec:
     spec:
       containers:
       - name: f4i-ngsild-stellio-f
-        image: fed4iot/ngsild-stellio-f:latest
+        imagePullPolicy: IfNotPresent
+        image: ngsild-stellio-f
         ports:
-        - containerPort: 9090
+        - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
@@ -29,5 +30,5 @@ spec:
   selector:
     app: f4i-ngsild-stellio
   ports:
-  - port: 9090
+  - port: 8080
     nodePort:

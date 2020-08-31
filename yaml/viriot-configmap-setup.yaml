@@ -5,7 +5,7 @@ metadata:
 data:
   settings.py: |
     # public IP address through which it is possible to access the default zone of k8s cluster
-    default_gateway_IP = ""
+    default_gateway_IP = "172.17.0.3"
 
     # MQTT settings (possibly two brokers one for control and another one for control messages)
     MQTT_data_broker_IP = "vernemq-mqtt.default.svc.cluster.local"
